@@ -1,7 +1,7 @@
 {
-  "name": "battleship",
+  "name": "battlegrid",
   "version": "0.0.1",
-  "description": "Battleship Clone written in node.",
+  "description": "Battleship Clone written in angular/node.",
   "main": "server.js",
   "scripts": {
     "ci-coverage": "istanbul cover ./node_modules/mocha/bin/_mocha -- -R tap && istanbul report clover"
