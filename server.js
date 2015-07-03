@@ -18,5 +18,7 @@ var io = require('socket.io').listen(server);
 // Configure Server
 serverInit(app,io);
 
-server.listen(8003);
-console.log('Server running on port 8003');
+var port = process.env.NODE_PORT || 8003;
+
+server.listen(port);
+console.log('Server running on port '+port);
