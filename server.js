@@ -11,7 +11,7 @@ var express = require('express');
 var serverInit = require(lib_path+'/serverInit');
 
 // Server Setup
-var app = express();
+var app = module.exports = express();
 var server = require('http').createServer(app);
 var io = require('socket.io').listen(server);
 
