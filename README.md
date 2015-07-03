@@ -1,3 +1,3 @@
 # BattleShip Clone #
 
-This project is a BattleShip clone written in JavaScript and Node.
+This project is a BattleShip clone written in Angular and Node. 
