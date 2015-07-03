@@ -1,0 +1,55 @@
+<div ng-show="activegames">
+  <h3>Active Games</h3>
+  <div class="panel panel-default">  
+    <table class="table">
+      <tr>
+        <th class="col-sm-1">GameID</th>
+        <th class="col-sm-1">Private</th>
+        <th class="col-sm-1">Started</th>
+        <th class="col-sm-1">Player 1</th>
+        <th class="col-sm-1">Hits</th>
+        <th class="col-sm-1">Player 2</th>
+        <th class="col-sm-1">Hits</th>
+        <th class="col-sm-1">Complete</th>
+      </tr>
+      <tr ng-repeat="game in activegames">
+        <td><a href="#/game/{{game._id}}">{{ game._id }}</a></td>
+        <td>{{ game.private ? 'Yes' : 'No' }}</td>
+        <td>{{ game.started ? 'Yes' : 'No' }}</td>
+        <td>{{ game.player1.username.username }}</td>
+        <td>{{ game.player1.hitNum }}</td>
+        <td>{{ game.player2.username ? game.player2.username : 'None' }}</td>
+        <td>{{ game.player2.hitNum }}</td>
+        <td>{{ game.completed ? 'Yes' : 'No' }}</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+
+<div ng-show="endedgames">
+  <h3>Completed Games</h3>
+  <div class="panel panel-default" ng-show="endedgames">
+  
+    <table class="table">
+      <tr>
+        <th class="col-sm-1">GameID</th>
+        <th class="col-sm-1">Started</th>
+        <th class="col-sm-1">Player1</th>
+        <th class="col-sm-1">Hits</th>
+        <th class="col-sm-1">Player2</th>
+        <th class="col-sm-1">Hits</th>
+        <th class="col-sm-1">Complete</th>
+      </tr>
+      <tr ng-repeat="game in endedgames">
+        <td><a href="#/game/{{game._id}}">{{ game._id }}</a></td>
+        <td>{{ game.started ? 'Yes' : 'No' }}</td>
+        <td>{{ game.player1.username }}</td>
+        <td>{{ game.player1.hitNum }}</td>
+        <td>{{ game.player2.username }}</td>
+        <td>{{ game.player2.hitNum }}</td>
+        <td>{{ game.completed ? 'Yes' : 'No' }}</td>
+      </tr>
+    </table>
+  </div>
+</div>

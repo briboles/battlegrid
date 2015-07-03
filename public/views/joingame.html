@@ -1,0 +1,17 @@
+<div ng-show="publicgames">
+  <h3>Public Games</h3>
+  <div class="panel panel-default">  
+    <table class="table">
+      <tr>
+        <th class="col-sm-1">GameID</th>
+        <th class="col-sm-1">Player 1</th>
+        <th class="col-sm-1">Created</th>
+      </tr>
+      <tr ng-repeat="game in publicgames">
+        <td><a href="#/game/{{game._id}}">{{ game._id }}</a></td>
+        <td>{{ game.player1.username.username }}</td>
+        <td>{{ game.created | date}}</td>
+      </tr>
+    </table>
+  </div>
+</div>
